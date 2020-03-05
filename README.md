@@ -10,9 +10,9 @@
 /usr/local/mysql/bin/mysql -h 127.0.0.1 -P 3306 -u root -p
 # 输入你的root密码
 # 创建用户
-create user 'port'@'%' identified by '123456';
+create user 'blog'@'%' identified by '123456';
 # 开放权限
-grant all privileges  on *.*  to "port"@'%';
+grant all privileges  on *.*  to "blog"@'%';
 exit;
 # 退出交互
 ```
