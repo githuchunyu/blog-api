@@ -1,0 +1,31 @@
+{
+  "name": "webos-api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "debug": "~2.6.8",
+    "koa": "^2.3.0",
+    "koa-body": "^4.1.1",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.0.0",
+    "koa-onerror": "^3.1.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "moment": "^2.24.0",
+    "mysql2": "^2.0.2",
+    "nexmo": "^2.5.2",
+    "nunjucks": "~3.0.0",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "eslint": "3.18.0",
+    "nodemon": "^2.0.2",
+    "sequelize-cli": "^5.5.1"
+  }
+}
