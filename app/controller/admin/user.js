@@ -4,7 +4,7 @@ const crypto = require('crypto')
 // 登录
 const login = async ctx => {
   const params = ctx.request.body
-  const user = await ctx.model.User.findOne({
+  const user = await ctx.model.user.findOne({
     where: {
       username: params.username,
       password: params.password
@@ -14,7 +14,7 @@ const login = async ctx => {
     // 生成并设置客户端token
     const token = crypto.createHash('md5').update(user.username).digest('hex')
     const expiredAt = new Date().getTime() + 7 * 24 * 3600 * 1000
-    await ctx.model.User.update({ token, expiredAt }, {
+    await ctx.model.user.update({ token, expiredAt }, {
       where: { id: user.id },
       silent: true
     })
@@ -27,7 +27,7 @@ const login = async ctx => {
 
 // 退出登录
 const logout = async ctx => {
-  await ctx.model.User.update({ token: '', expiredAt: new Date() }, {
+  await ctx.model.user.update({ token: '', expiredAt: new Date() }, {
     where: { id: ctx.user.id },
     silent: true
   })
