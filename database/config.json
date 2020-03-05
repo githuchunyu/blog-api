@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "blog",
-    "password": "blog@2020",
-    "database": "webos",
+    "password": "123456",
+    "database": "blog",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "seederStorage": "sequelize"

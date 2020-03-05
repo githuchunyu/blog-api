@@ -36,57 +36,57 @@ const routes = [
   // 登录
   ['post', '/admin/user/login', c.admin.user.login, [common()]],
   // 登出
-  ['post', '/admin/user/logout', c.admin.user.logout, [common({ auth: 'admin' })]],
+  ['post', '/admin/user/logout', c.admin.user.logout, [common({ auth: true })]],
   // 发送短信验证码
   ['post', '/admin/user/sms', c.admin.user.sendSms, [common()]],
   // 获取信息
-  ['get', '/admin/user/info', c.admin.user.getInfo, [common({ auth: 'admin' })]],
+  ['get', '/admin/user/info', c.admin.user.getInfo, [common({ auth: true })]],
   // 设置个人信息
-  ['post', '/admin/user/info', c.admin.user.setInfo, [common({ auth: 'admin' })]],
+  ['post', '/admin/user/info', c.admin.user.setInfo, [common({ auth: true })]],
   // 上传文件，比如头像，图片一类的
-  ['post', '/admin/picture/upload', c.admin.picture.upload, [common({ auth: 'admin' })]],
+  ['post', '/admin/picture/upload', c.admin.picture.upload, [common({ auth: true })]],
   // 获取图片文件夹和文件
-  ['post', '/admin/picture/list', c.admin.picture.getList, [common({ auth: 'admin' })]],
+  ['post', '/admin/picture/list', c.admin.picture.getList, [common({ auth: true })]],
   // 创建图片文件夹
-  ['post', '/admin/picture/album/add', c.admin.picture.addAlbum, [common({ auth: 'admin' })]],
+  ['post', '/admin/picture/album/add', c.admin.picture.addAlbum, [common({ auth: true })]],
   // 删除图片文件夹
-  ['post', '/admin/picture/album/remove', c.admin.picture.removeAlbum, [common({ auth: 'admin' })]],
+  ['post', '/admin/picture/album/remove', c.admin.picture.removeAlbum, [common({ auth: true })]],
   // 设置图片文件夹 - 移动，改名等
-  ['post', '/admin/picture/album/update', c.admin.picture.updateAlbum, [common({ auth: 'admin' })]],
+  ['post', '/admin/picture/album/update', c.admin.picture.updateAlbum, [common({ auth: true })]],
   // 创建图片
-  ['post', '/admin/picture/image/add', c.admin.picture.addImage, [common({ auth: 'admin' })]],
+  ['post', '/admin/picture/image/add', c.admin.picture.addImage, [common({ auth: true })]],
   // 删除图片
-  ['post', '/admin/picture/image/remove', c.admin.picture.removeImage, [common({ auth: 'admin' })]],
+  ['post', '/admin/picture/image/remove', c.admin.picture.removeImage, [common({ auth: true })]],
   // 设置图片
-  ['post', '/admin/picture/image/update', c.admin.picture.updateImage, [common({ auth: 'admin' })]],
+  ['post', '/admin/picture/image/update', c.admin.picture.updateImage, [common({ auth: true })]],
   // 获取文章分类
-  ['get', '/admin/blog/cat/list', c.admin.blog.getCats, [common({ auth: 'admin' })]],
+  ['get', '/admin/blog/cat/list', c.admin.blog.getCats, [common({ auth: true })]],
   // 添加分类
-  ['post', '/admin/blog/cat/add', c.admin.blog.addCat, [common({ auth: 'admin' })]],
+  ['post', '/admin/blog/cat/add', c.admin.blog.addCat, [common({ auth: true })]],
   // 删除分类
-  ['post', '/admin/blog/cat/remove', c.admin.blog.removeCat, [common({ auth: 'admin' })]],
+  ['post', '/admin/blog/cat/remove', c.admin.blog.removeCat, [common({ auth: true })]],
   // 修改分类
-  ['post', '/admin/blog/cat/update', c.admin.blog.updateCat, [common({ auth: 'admin' })]],
+  ['post', '/admin/blog/cat/update', c.admin.blog.updateCat, [common({ auth: true })]],
   // 获取文章列表
-  ['get', '/admin/blog/article/list', c.admin.blog.getArticles, [common({ auth: 'admin' })]],
+  ['get', '/admin/blog/article/list', c.admin.blog.getArticles, [common({ auth: true })]],
   // 获取文章详情
-  ['get', '/admin/blog/article/detail', c.admin.blog.getArticle, [common({ auth: 'admin' })]],
+  ['get', '/admin/blog/article/detail', c.admin.blog.getArticle, [common({ auth: true })]],
   // 添加文章
-  ['post', '/admin/blog/article/add', c.admin.blog.addArticle, [common({ auth: 'admin' })]],
+  ['post', '/admin/blog/article/add', c.admin.blog.addArticle, [common({ auth: true })]],
   // 删除文章
-  ['post', '/admin/blog/article/remove', c.admin.blog.removeArticle, [common({ auth: 'admin' })]],
+  ['post', '/admin/blog/article/remove', c.admin.blog.removeArticle, [common({ auth: true })]],
   // 修改文章
-  ['post', '/admin/blog/article/update', c.admin.blog.updateArticle, [common({ auth: 'admin' })]],
+  ['post', '/admin/blog/article/update', c.admin.blog.updateArticle, [common({ auth: true })]],
   // 获取评论
-  ['get', '/admin/comment/list', c.admin.comment.getComments, [common({ auth: 'admin' })]],
+  ['get', '/admin/comment/list', c.admin.comment.getComments, [common({ auth: true })]],
   // 删除评论
-  ['post', '/admin/comment/remove', c.admin.comment.removeComment, [common({ auth: 'admin' })]],
+  ['post', '/admin/comment/remove', c.admin.comment.removeComment, [common({ auth: true })]],
   // 获取评论违禁词
-  ['get', '/admin/comment/forbid', c.admin.comment.getForbid, [common({ auth: 'admin' })]],
+  ['get', '/admin/comment/forbid', c.admin.comment.getForbid, [common({ auth: true })]],
   // 设置评论违禁词
-  ['post', '/admin/comment/forbid', c.admin.comment.setForbid, [common({ auth: 'admin' })]],
+  ['post', '/admin/comment/forbid', c.admin.comment.setForbid, [common({ auth: true })]],
   // 获取网站统计数据
-  ['get', '/admin/stats', c.admin.stats.getStats, [common({ auth: 'admin' })]],
+  ['get', '/admin/stats', c.admin.stats.getStats, [common({ auth: true })]],
 ]
 
 // 生成路由
